@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./output.css">
+  <title>Document</title>
+</head>
+
+<body class="bg-[#FFFFFF]">
+
+  <header class="py-[26px]">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <div class="flex gap-[12px] items-center">
+          <div class="flex gap-[5px] items-center">
+            <a class="font-normal text-[20px] text-[#22262a]" href="#">EN</a>
+            <img src="./img/img.svg" alt="">
+          </div>
+          <div class="flex gap-[5px] items-center">
+            <a class="font-normal text-[20px] text-[#22262a]" href="#">USD</a>
+            <img src="./img/img.svg" alt="">
+          </div>
+
+        </div>
+
+        <div class="flex items-center gap-[26px]">
+          <div class="flex items-center gap-[6px]">
+            <img src="./img/img1.svg" alt="img">
+            <a class="font-normal text-[20px] text-[#262626]" href="#">My profile</a>
+          </div>
+          <img class="row" src="./img/img2.svg" alt="img">
+          <div class="">
+            <p class="font-normal text-[20px] text-[#262626]">Items</p>
+          </div>
+          <div class="flex items-center gap-[6px]">
+            <p class="font-normal text-[20px] text-[#262626]">$0.00</p>
+            <img src="./img/search.svg" alt="img">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <section class="pb-[30px]">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <div class="">
+          <img src="./img/logo.svg" alt="logo">
+        </div>
+        <div class="flex items-center gap-[97px]">
+          <a class="font-medium text-[24px] text-[#40bfff]" href="#">HOME</a>
+          <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="./card.html">BAGS</a>
+          <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="#">SNEAKERS</a>
+          <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="#">BELT</a>
+          <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="#">CONTACT</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="">
+    <div class="container">
+      <div class="slider">
+        <div class="slides">
+          <div class="slide active">
+            <img class="img" src="./img/hero.png" alt="Rasm 1">
+          </div>
+          <div class="slide">
+            <img class="img" src="./img/hero1.png" alt="Rasm 2">
+          </div>
+          <div class="slide">
+            <img class="img" src="./img/hero.png" alt="Rasm 3">
+          </div>
+          <div class="slide">
+            <img class="img" src="./img/hero.png" alt="Rasm 4">
+          </div>
+        </div>
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+      </div>
+    </div>
+  </section>
+  <section class="pt-[40px] pb-[40px] hidden">
+    <div class="container">
+      <div class="">
+        <h2 class="font-semibold text-[16px] quantity">Qty</h2>
+        <h2 class="font-semibold text-[16px] price">Price</h2>
+        <div id="total-price" class="font-semibold text-[16px] price">Total Price: 0$</div>
+        <div id="total-quantity" class="font-semibold text-[16px] price">Total Items: 0</div>
+        <div id="cart"></div>
+      </div>
+      <div class="row pt-5 grid grid-cols-2 gap-[20px]">
+      </div>
+    </div>
+    </section>
+  <section class="">
+    <div class="container">
+      <div class="relative">
+        <div class="flex items-center gap-[3px] absolute bottom-[300px] right-[25px]">
+          <div class="relative w-[417px] rounded-[5px]">
+            <h2 class="font-bold text-[20px] text-[#223263] w-[160px] absolute top-[29px] left-[50px]">FS - Nike Air Max
+              270 React...</h2>
+            <img class="" src="./img/img1.png" alt="">
+            <p class="absolute font-bold text-[18px] text-[#9098b1] mt-[-90px] left-[52px]">$534,33 <span
+                class="font-bold text-[18px] text-[#fb7181]">24% Off</span></p>
+            <p class="font-bold text-[25px] text-[#40bfff] absolute bottom-[30px] right-[41px]"><span
+                class="text-[30px]">$2</span>99,43</p>
+          </div>
+          <div class="relative w-[417px] rounded-[5px]">
+            <h2 class="font-bold text-[20px] text-[#223263] w-[160px] absolute top-[29px] left-[50px]">FS - Nike Air Max
+              270 React...</h2>
+            <p class="font-bold text-[25px] text-[#40bfff] absolute top-[20px] right-[41px]"><span
+                class="text-[30px]">$2</span>99,43</p>
+            <img class="h-[354px]" src="./img/img.png" alt="">
+            <p class="absolute font-normal text-[18px] text-[#9098b1] left-[30%] bottom-[2px] ">$534,33 <span
+                class="font-bold text-[18px] text-[#fb7181]">24% Off</span></p>
+          </div>
+          <div class="relative w-[417px] rounded-[5px]">
+            <h2 class="font-bold text-[20px] text-[#223263] w-[160px] absolute top-[29px] left-[50px]">FS - Nike Air Max
+              270 React...</h2>
+            <img class="" src="./img/img2.png" alt="">
+            <p class="absolute font-bold text-[18px] text-[#9098b1] top-[121px] left-[52px]">$534,33 <span
+                class="font-bold text-[18px] text-[#fb7181]">24% Off</span></p>
+            <p class="font-bold text-[25px] text-[#40bfff] absolute bottom-[30px] right-[41px]"><span
+                class="text-[30px]">$2</span>99,43</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-[115px]">
+    <div class="container">
+      <h1 class="font-semibold text-[35px] text-[#22262a] text-center">BEST SELLER</h1>
+        <div class="menu flex items-center justify-center gap-[60px] mt-[26px]"></div>
+        <div class="box grid grid-cols-4">
+
+          <div class="row pt-5 grid grid-cols-2 gap-[20px]"></div>
+        </div>
+
+
+          <!-- <div class="seller__buttons_wrapper">
+            <a class="seller__like_btn" href="#"></a>
+            <a class="seller__like_btn" href="#"></a>
+         
+
+          <div class="seller__buttons">
+            <div class="seller__buttons_wrapper">
+              <a class="seller__like_btn" href="#"></a>
+              <a class="seller__like_btn" href="#"></a>
+            </div>          
+          </div>
+
+        </div> -->
+   
+    </div>
+  </section>
+ 
+  <section class="pb-[51px]">
+    <div class="container">
+      <ul class="lists w-[1091px] flex justify-between ml-auto mr-auto items-center pb-[135px]">
+        <li class="items w-[193px]">
+          <img class="ml-auto mr-auto" src="./img/menu.svg" alt="img">
+          <p class="font-medium text-[27px] text-[#22262a] mt-[54px]">FREE SHIPPING</p>
+        </li>
+        <li class="items w-[193px]">
+          <img class="ml-auto mr-auto" src="./img/menu1.svg" alt="img">
+          <p class="font-medium text-[27px] text-[#22262a] mt-[54px]">100% REFUND</p>
+        </li>
+        <li class="items w-[193px]">
+          <img class="ml-auto mr-auto" src="./img/menu2.svg" alt="img">
+          <p class="font-medium text-[27px] text-[#22262a] mt-[54px]">SUPPORT 24/7</p>
+        </li>
+      </ul>
+      <div class="w-[635px] flex justify-between items-center border border-spacing-2 ml-auto mr-auto rounded-[10px]">
+        <input class="font-medium border-none text-[18px] text-[#262626] pl-[21px] pb-[19px] pt-[23px]" type="text" placeholder="Search query...">
+        <button class="font-bold text-[20px] text-[#fff] bg-[#40BFFF] pt-[19px] pb-[20px] pl-[28px] pr-[28px] rounded-[10px]">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pt-[150px] pb-[55px] bg-[#BCDDFE]">
+    <div class="container">
+      <ul class="flex justify-between mb-[280px]">
+        <li class="w-[225px]">
+          <img src="./img/img_7.png" alt="img">
+          <p class="mt-[16px] font-medium text-[14px] text-[#22262a] text-start">Lorem Ipsum is simply dummy text of the
+            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Since the
+            1500s, when an unknown printer.</p>
+        </li>
+        <li class="w-[225px]">
+          <h3 class="font-bold text-[18px] text-[#22262a]">Follow Us</h3>
+          <p class="font medium text-[14px] text-[#22262a] mt-[20px]">Since the 1500s, when an unknown printer took a
+            galley of type and scrambled.</p>
+          <div class="flex gap-[40px] mt-[23px]">
+            <img src="./img/img_8.svg" alt="img">
+            <img src="./img/img_9.svg" alt="img">
+          </div>
+        </li>
+        <li class="w-[225px]">
+          <h3 class="font-bold text-[18px] text-[#22262a]">Contact Us</h3>
+          <p class="font medium text-[14px] text-[#22262a] mt-[20px]">E-Comm , 4578 <br> Marmora Road, <br> Glasgow D04
+            89GR</p>
+        </li>
+      </ul>
+      <div>
+        <img class="w-[1205px] h-[2px]" src="./img/img_10.svg" alt="img">
+        <div>
+          <div class="mt-[34px] flex gap-[648px] items-center">
+            <a class="font-medium text-[#c1c8ce] text-[16px] " href="#">© 2018 Ecommerce theme by www.bisenbaev.com</a>
+            <img src="./img/img_11.svg" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script type="module" src="./Data/script.js"></script>
+</body>
+
+</html>

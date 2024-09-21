@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./output.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="py-[26px]">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <div class="flex gap-[12px] items-center">
+          <div class="flex gap-[5px] items-center">
+            <a class="font-normal text-[20px] text-[#22262a]" href="#">EN</a>
+            <img src="./img/img.svg" alt="">
+          </div>
+          <div class="flex gap-[5px] items-center">
+            <a class="font-normal text-[20px] text-[#22262a]" href="#">USD</a>
+            <img src="./img/img.svg" alt="">
+          </div>
+        </div>
+        <div class="flex items-center gap-[26px]">
+          <div class="flex items-center gap-[6px]">
+            <img src="./img/img1.svg" alt="img">
+            <a class="font-normal text-[20px] text-[#262626]" href="#">My profile</a>
+          </div>
+          <img class="row" src="./img/img2.svg" alt="img">
+          <div class="">
+            <p class="font-normal text-[20px] text-[#262626]">Items</p>
+          </div>
+          <div class="flex items-center gap-[6px]">
+            <p class="font-normal text-[20px] text-[#262626]">$0.00</p>
+            <img src="./img/search.svg" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="pb-[30px]">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <div>
+          <img src="./img/logo.svg" alt="logo">
+        </div>
+        <div class="flex items-center gap-[97px]">
+          <a class="font-medium text-[24px] text-[#40bfff]" href="./index.html">HOME</a>
+          <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="./card.html">BAGS</a>
+          <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="#">SNEAKERS</a>
+          <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="#">BELT</a>
+          <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="#">CONTACT</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-[40px] pb-[40px] flex">
+    <div class="container">
+      <div class="flex justify-between">
+        <div>
+          <h1 class="">PRODUCT</h1>
+        </div>
+        <div class="flex items-center gap-10">
+          <h2 class="font-semibold text-[16px] quantity">Qty</h2>
+          <h2 class="font-semibold text-[16px] price">Price</h2>
+          <div id="total-price" class="font-semibold text-[16px]">Total Price: 0$</div>
+          <div id="total-quantity" class="font-semibold text-[16px]">Total Items: 0</div>
+        </div>
+      </div>
+      <div class="grid grid-cols-4 gap-[30px] pt-[40px]" id="cart"></div>
+    </div>
+  </section>
+
+  
+  <script>
+    const cartElement = document.getElementById('cart');
+    const totalPriceElement = document.getElementById('total-price');
+    const totalQuantityElement = document.getElementById('total-quantity');
+    const carts = JSON.parse(localStorage.getItem('javohir')) || [];
+
+    if (carts.length === 0) {
+      cartElement.innerText = '';
+    } else {
+      let totalQuantity = 0;
+      let totalPrice = 0;
+
+
+      carts.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'cart-item';
+        itemDiv.innerHTML = `
+          <div class="w-[300px] h-[px] shadow-xl bg-[#fff] rounded-[10px] p-[50px]">
+      <img class="w-[200px] h-[150px]" src="${item.image}" alt="">
+      <h1 class="font-bold text-[#223263] w-[250px] mt-3">${item.title}</h1>
+      <div class="flex items-center gap-[10px] mt-3">
+        <p class="text-[#223263] font-bold">${item.price}</p>
+        <p class="text-[#223263] font-bold">${item.rating.rate}</p>
+        <p class="text-[red]">${Math.round(item.price / 100 * 24)}</p>
+        <button class="bg-amber-600 py-[7px] px-[10px] rounded-[10px]" data-id="${item.id}">Delet</button>
+      </div>
+    </div>  
+`;
+        cartElement.appendChild(itemDiv);
+        totalQuantity += item.quantity;
+        totalPrice += item.price * item.quantity;
+      });
+
+      totalQuantityElement.innerText = `Total Items: ${totalQuantity}`;
+      totalPriceElement.innerText = `Total Price: $${totalPrice.toFixed(2)}`;
+    }
+
+    cartElement.addEventListener('click', (e) => {
+      const button = e.target.closest('[data-id]');
+      if (button) {
+        const id = button.dataset.id;
+        deleteCart(id);
+      }
+    });
+
+    const deleteCart = (id) => {
+      const updatedCarts = carts.filter(item => item.id !== Number(id));
+      localStorage.setItem('javohir', JSON.stringify(updatedCarts));
+      location.reload();
+    };
+  </script>
+
+</body>
+
+</html>
