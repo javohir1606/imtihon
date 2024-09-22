@@ -6,7 +6,7 @@ module.exports = {
       container:{
         center: true,
         screens:{
-          lg: "1315px"
+          lg: "1300px"
         }
       }
     },

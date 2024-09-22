@@ -9,33 +9,45 @@
 </head>
 
 <body>
+
   <header class="py-[26px]">
     <div class="container">
       <div class="flex items-center justify-between">
         <div class="flex gap-[12px] items-center">
           <div class="flex gap-[5px] items-center">
-            <a class="font-normal text-[20px] text-[#22262a]" href="#">EN</a>
-            <img src="./img/img.svg" alt="">
+            <select>
+              <option class="font-bold text-[20px] text-[#000]" value="#">UZB</option>
+              <option class="font-bold text-[20px] text-[#000]" value="#">ENG</option>
+              <option class="font-bold text-[20px] text-[#000]" value="#">RUS</option>
+            </select>
           </div>
           <div class="flex gap-[5px] items-center">
-            <a class="font-normal text-[20px] text-[#22262a]" href="#">USD</a>
-            <img src="./img/img.svg" alt="">
+            <select>
+              <option class="font-bold text-[20px] text-[#000]" value="#">RUS</option>
+              <option class="font-bold text-[20px] text-[#000]" value="#">ENG</option>
+              <option class="font-bold text-[20px] text-[#000]" value="#">UZB</option>
+            </select>
           </div>
         </div>
+
         <div class="flex items-center gap-[26px]">
           <div class="flex items-center gap-[6px]">
             <img src="./img/img1.svg" alt="img">
             <a class="font-normal text-[20px] text-[#262626]" href="#">My profile</a>
           </div>
-          <img class="row" src="./img/img2.svg" alt="img">
-          <div class="">
-            <p class="font-normal text-[20px] text-[#262626]">Items</p>
-          </div>
+          <a class="flex gap-[5px] items-center relative" href="./card.html">
+            <div class="totalEnd w-5 h-5 bg-[#cf3352] rounded-[50%] flex items-center text-[#fff] justify-center absolute top-[-7px] left-[12px]"></div>
+            <img src="./img/img2.svg" alt="img">
+            <p class="font-normal text-[20px] text-[#262626]">Mahsulotlar</p>
+          </a>
+          
+
           <div class="flex items-center gap-[6px]">
             <p class="font-normal text-[20px] text-[#262626]">$0.00</p>
             <img src="./img/search.svg" alt="img">
           </div>
         </div>
+
       </div>
     </div>
   </header>
@@ -57,29 +69,71 @@
     </div>
   </section>
 
-  <section class="pt-[40px] pb-[40px] flex">
+  <section class="pt-[40px] pb-[100px] flex">
     <div class="container">
       <div class="flex justify-between">
         <div>
-          <h1 class="">PRODUCT</h1>
+          <h1 class="font-bold text-[20px]">PRODUCT</h1>
         </div>
         <div class="flex items-center gap-10">
-          <h2 class="font-semibold text-[16px] quantity">Qty</h2>
-          <h2 class="font-semibold text-[16px] price">Price</h2>
-          <div id="total-price" class="font-semibold text-[16px]">Total Price: 0$</div>
-          <div id="total-quantity" class="font-semibold text-[16px]">Total Items: 0</div>
+          <h2 class="font-semibold text-[20px] quantity">Qty</h2>
+          <h2 class="font-semibold text-[20px] price">Price</h2>
+          <div id="total-price" class="font-semibold text-[20px]">Total Price: 0$</div>
+          <div id="total-quantity" class="font-semibold text-[20px]">Total Items: 0</div>
         </div>
       </div>
       <div class="grid grid-cols-4 gap-[30px] pt-[40px]" id="cart"></div>
     </div>
   </section>
 
-  
+  <footer class="pt-[150px] pb-[55px] bg-[#BCDDFE]">
+    <div class="container">
+      <ul class="flex justify-between mb-[280px]">
+        <li class="w-[225px]">
+          <img src="./img/logo.svg" alt="img">
+          <p class="mt-[16px] font-medium text-[14px] text-[#22262a] text-start">Lorem Ipsum is simply dummy text of the
+            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Since the
+            1500s, when an unknown printer.</p>
+        </li>
+        <li class="w-[225px]">
+          <h3 class="font-bold text-[18px] text-[#22262a]">Follow Us</h3>
+          <p class="font-medium text-[14px] text-[#22262a] mt-[20px]">Since the 1500s, when an unknown printer took a
+            galley of type and scrambled.</p>
+          <div class="flex gap-[40px] mt-[23px]">
+            <img src="./img/imgb.svg" alt="img">
+            <img src="./img/imga.svg" alt="img">
+          </div>
+        </li>
+        <li class="w-[225px]">
+          <h3 class="font-bold text-[18px] text-[#22262a]">Contact Us</h3>
+          <p class="font-medium text-[14px] text-[#22262a] mt-[20px]">E-Comm , 4578 <br> Marmora Road, <br> Glasgow D04
+            89GR</p>
+        </li>
+      </ul>
+      <div>
+        <img class="w-[1205px] h-[2px]" src="./img/footir.svg" alt="img">
+        <div>
+          <div class="mt-[34px] flex gap-[648px] items-center">
+            <a class="font-medium text-[#c1c8ce] text-[16px] " href="#">© 2018 Ecommerce theme by www.bisenbaev.com</a>
+            <div class="flex items-center gap-[20px]">
+
+              <img src="./img/menu3.svg" alt="img">
+              <img src="./img/footer.svg" alt="img">
+              <img src="./img/footer1.svg" alt="img">
+              <img src="./img/footer2.svg" alt="img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script>
     const cartElement = document.getElementById('cart');
     const totalPriceElement = document.getElementById('total-price');
     const totalQuantityElement = document.getElementById('total-quantity');
     const carts = JSON.parse(localStorage.getItem('javohir')) || [];
+ 
 
     if (carts.length === 0) {
       cartElement.innerText = '';
@@ -92,20 +146,23 @@
         const itemDiv = document.createElement('div');
         itemDiv.className = 'cart-item';
         itemDiv.innerHTML = `
-          <div class="w-[300px] h-[px] shadow-xl bg-[#fff] rounded-[10px] p-[50px]">
-      <img class="w-[200px] h-[150px]" src="${item.image}" alt="">
-      <h1 class="font-bold text-[#223263] w-[250px] mt-3">${item.title}</h1>
-      <div class="flex items-center gap-[10px] mt-3">
-        <p class="text-[#223263] font-bold">${item.price}</p>
-        <p class="text-[#223263] font-bold">${item.rating.rate}</p>
-        <p class="text-[red]">${Math.round(item.price / 100 * 24)}</p>
-        <button class="bg-amber-600 py-[7px] px-[10px] rounded-[10px]" data-id="${item.id}">Delet</button>
+         <div class="w-[300px] h-[px] shadow-xl bg-[#fff] rounded-[10px] p-[40px] hover:bg-slate-100">
+             <img class="image w-[200px] h-[150px] rounded-[10px]" src="${item.image}" alt="">
+              <h1 class="font-bold text-[#223263] w-[250px] mt-3">${item.title}</h1>
+              <div class="flex items-center justify-between gap-[10px] mt-3">
+            <div class="flex items-center gap-[10px] mt-3">
+              <p class="text-[] font-bold  line-through">${item.price}</p>
+              <p class="text-[#7b649f] font-bold">${Math.round(item.price -(item.price / 100 *24))}$</p>
+              <p class="font-semibold text-[15px] text-[red]">24%Off</p>
+            </div>
+        <button id='addToCart' class="bg-amber-600 hover:bg-white  py-[5px] px-[15px] text-[#fff] hover:text-amber-600 border-[3px] border-amber-600 font-bold rounded-[10px]" data-id="${item.id}">Delet</button>
       </div>
-    </div>  
-`;
+    </div>
+      `;
         cartElement.appendChild(itemDiv);
+
         totalQuantity += item.quantity;
-        totalPrice += item.price * item.quantity;
+        totalPrice += Math.round(item.price -(item.price / 100 *24)) * Number(item.quantity);
       });
 
       totalQuantityElement.innerText = `Total Items: ${totalQuantity}`;
@@ -125,6 +182,19 @@
       localStorage.setItem('javohir', JSON.stringify(updatedCarts));
       location.reload();
     };
+
+    
+    
+const updateCartCount = () => {
+  
+  let cartItems = JSON.parse(localStorage.getItem('javohir')) || [];
+
+  const totalItems = cartItems.length;
+
+  document.querySelector('.totalEnd').textContent = totalItems;
+};
+updateCartCount();
+
   </script>
 
 </body>

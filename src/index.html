@@ -15,13 +15,20 @@
       <div class="flex items-center justify-between">
         <div class="flex gap-[12px] items-center">
           <div class="flex gap-[5px] items-center">
-            <a class="font-normal text-[20px] text-[#22262a]" href="#">EN</a>
-            <img src="./img/img.svg" alt="">
+            <select>
+              <option class="font-bold text-[20px] text-[#000]" value="#">UZB</option>
+              <option class="font-bold text-[20px] text-[#000]" value="#">ENG</option>
+              <option class="font-bold text-[20px] text-[#000]" value="#">RUS</option>
+            </select>
           </div>
           <div class="flex gap-[5px] items-center">
-            <a class="font-normal text-[20px] text-[#22262a]" href="#">USD</a>
-            <img src="./img/img.svg" alt="">
+            <select>
+              <option class="font-bold text-[20px] text-[#000]" value="#">RUS</option>
+              <option class="font-bold text-[20px] text-[#000]" value="#">ENG</option>
+              <option class="font-bold text-[20px] text-[#000]" value="#">UZB</option>
+            </select>
           </div>
+
 
         </div>
 
@@ -30,10 +37,13 @@
             <img src="./img/img1.svg" alt="img">
             <a class="font-normal text-[20px] text-[#262626]" href="#">My profile</a>
           </div>
-          <img class="row" src="./img/img2.svg" alt="img">
-          <div class="">
-            <p class="font-normal text-[20px] text-[#262626]">Items</p>
-          </div>
+          <a class="flex gap-[5px] items-center relative" href="./card.html">
+            <div class="totalEnd w-5 h-5 bg-[#e63659] rounded-[50%] flex items-center text-[#fff] justify-center absolute top-[-7px] left-[12px]"></div>
+            <img src="./img/img2.svg" alt="img">
+            <p class="font-normal text-[20px] text-[#262626]">Mahsulotlar</p>
+          </a>
+          
+
           <div class="flex items-center gap-[6px]">
             <p class="font-normal text-[20px] text-[#262626]">$0.00</p>
             <img src="./img/search.svg" alt="img">
@@ -52,7 +62,8 @@
         </div>
         <div class="flex items-center gap-[97px]">
           <a class="font-medium text-[24px] text-[#40bfff]" href="#">HOME</a>
-          <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="./card.html">BAGS</a>
+          <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="./card.html">Shop</a>
+          <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="#">BAGS</a>
           <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="#">SNEAKERS</a>
           <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="#">BELT</a>
           <a class="font-medium text-[24px] text-[#262626] hover:text-[#40bfff]" href="#">CONTACT</a>
@@ -65,25 +76,26 @@
     <div class="container">
       <div class="slider">
         <div class="slides">
+          <div class="slide">
+            <img class="img" src="./img/hero.png" alt="Rasm 2">
+          </div>
           <div class="slide active">
             <img class="img" src="./img/hero.png" alt="Rasm 1">
           </div>
           <div class="slide">
-            <img class="img" src="./img/hero1.png" alt="Rasm 2">
-          </div>
-          <div class="slide">
             <img class="img" src="./img/hero.png" alt="Rasm 3">
           </div>
-          <div class="slide">
-            <img class="img" src="./img/hero.png" alt="Rasm 4">
-          </div>
+
         </div>
         <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
         <a class="next" onclick="moveSlide(1)">&#10095;</a>
       </div>
     </div>
   </section>
-  <section class="pt-[40px] pb-[40px] hidden">
+
+ 
+  
+  <section class="pt-[40px] hidden">
     <div class="container">
       <div class="">
         <h2 class="font-semibold text-[16px] quantity">Qty</h2>
@@ -95,11 +107,12 @@
       <div class="row pt-5 grid grid-cols-2 gap-[20px]">
       </div>
     </div>
-    </section>
+  </section>
+  
   <section class="">
     <div class="container">
       <div class="relative">
-        <div class="flex items-center gap-[3px] absolute bottom-[300px] right-[25px]">
+        <div class="flex items-center gap-[3px] absolute top-[-100px] right-[25px]">
           <div class="relative w-[417px] rounded-[5px]">
             <h2 class="font-bold text-[20px] text-[#223263] w-[160px] absolute top-[29px] left-[50px]">FS - Nike Air Max
               270 React...</h2>
@@ -133,11 +146,11 @@
     </div>
   </section>
 
-  <section class="pb-[115px]">
+  <section class="pb-[115px] pt-[400px]">
     <div class="container">
       <h1 class="font-semibold text-[35px] text-[#22262a] text-center">BEST SELLER</h1>
         <div class="menu flex items-center justify-center gap-[60px] mt-[26px]"></div>
-        <div class="box grid grid-cols-4">
+        <div class="box grid grid-cols-4 gap-[30px] mb-5 mt-[40px]">
 
           <div class="row pt-5 grid grid-cols-2 gap-[20px]"></div>
         </div>
@@ -187,39 +200,45 @@
     <div class="container">
       <ul class="flex justify-between mb-[280px]">
         <li class="w-[225px]">
-          <img src="./img/img_7.png" alt="img">
+          <img src="./img/logo.svg" alt="img">
           <p class="mt-[16px] font-medium text-[14px] text-[#22262a] text-start">Lorem Ipsum is simply dummy text of the
             printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Since the
             1500s, when an unknown printer.</p>
         </li>
         <li class="w-[225px]">
           <h3 class="font-bold text-[18px] text-[#22262a]">Follow Us</h3>
-          <p class="font medium text-[14px] text-[#22262a] mt-[20px]">Since the 1500s, when an unknown printer took a
+          <p class="font-medium text-[14px] text-[#22262a] mt-[20px]">Since the 1500s, when an unknown printer took a
             galley of type and scrambled.</p>
           <div class="flex gap-[40px] mt-[23px]">
-            <img src="./img/img_8.svg" alt="img">
-            <img src="./img/img_9.svg" alt="img">
+            <img src="./img/imgb.svg" alt="img">
+            <img src="./img/imga.svg" alt="img">
           </div>
         </li>
         <li class="w-[225px]">
           <h3 class="font-bold text-[18px] text-[#22262a]">Contact Us</h3>
-          <p class="font medium text-[14px] text-[#22262a] mt-[20px]">E-Comm , 4578 <br> Marmora Road, <br> Glasgow D04
+          <p class="font-medium text-[14px] text-[#22262a] mt-[20px]">E-Comm , 4578 <br> Marmora Road, <br> Glasgow D04
             89GR</p>
         </li>
       </ul>
       <div>
-        <img class="w-[1205px] h-[2px]" src="./img/img_10.svg" alt="img">
+        <img class="w-[1205px] h-[2px]" src="./img/footir.svg" alt="img">
         <div>
           <div class="mt-[34px] flex gap-[648px] items-center">
             <a class="font-medium text-[#c1c8ce] text-[16px] " href="#">© 2018 Ecommerce theme by www.bisenbaev.com</a>
-            <img src="./img/img_11.svg" alt="img">
+            <div class="flex items-center gap-[20px]">
+
+              <img src="./img/menu3.svg" alt="img">
+              <img src="./img/footer.svg" alt="img">
+              <img src="./img/footer1.svg" alt="img">
+              <img src="./img/footer2.svg" alt="img">
+            </div>
           </div>
         </div>
       </div>
     </div>
   </footer>
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./Data/slick.min.js"></script>
   <script type="module" src="./Data/script.js"></script>
 </body>
 
